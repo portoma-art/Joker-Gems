@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Joker Gems</title>
+    <style>
+        :root { --primary: #6b21a8; --accent: #fbbf24; --bg: #0f0a1a; --card-bg: rgba(255, 255, 255, 0.05); --text: #e2e8f0; }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); }
+        nav { padding: 20px; display: flex; justify-content: center; gap: 15px; background: rgba(0,0,0,0.2); }
+        nav a { color: var(--text); text-decoration: none; padding: 8px 16px; border-radius: 20px; transition: 0.3s; border: 1px solid transparent; }
+        nav a:hover, nav a.active { border-color: var(--accent); color: var(--accent); }
+        .container { max-width: 800px; margin: 40px auto; padding: 20px; }
+        .policy-content { background: var(--card-bg); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); }
+        h1 { color: var(--accent); }
+        .highlight-box { border-left: 4px solid #10b981; background: rgba(16, 185, 129, 0.1); padding: 20px; margin: 20px 0; border-radius: 0 10px 10px 0; }
+        
+        /* Native Close Button */
+        .native-close-btn {
+            display: block; width: 100%; padding: 18px; background: none; border: 2px solid var(--accent);
+            color: var(--accent); border-radius: 15px; font-size: 1.1rem; font-weight: bold; cursor: pointer;
+            margin-top: 40px; transition: 0.3s;
+        }
+        .native-close-btn:active { background: var(--accent); color: #000; transform: scale(0.98); }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="marketing.html">Marketing</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html" class="active">Privacy</a>
+    </nav>
+    <div class="container">
+        <div class="policy-content">
+            <h1>Privacy Policy</h1>
+            <p>Last updated: October 2024</p>
+            
+            <div class="highlight-box">
+                <strong>Summary:</strong> Joker Gems does not collect, store, or share any personal data. Your privacy is our priority.
+            </div>
+
+            <h2>1. Data Collection</h2>
+            <p>Joker Gems was built as a privacy-first application. We do not collect any personal information, device identifiers, or usage statistics.</p>
+
+            <h2>2. Data Storage</h2>
+            <p>Since we do not collect any data, no data is stored on our servers or transmitted to any third parties.</p>
+
+            <h2>3. Third Parties</h2>
+            <p>The app does not use any third-party analytics or advertising SDKs that track user behavior.</p>
+
+            <p>If you have any questions, feel free to contact us at portoma@atomicmail.io.</p>
+
+            <button class="native-close-btn" onclick="callNativeClose()">Back to App</button>
+        </div>
+    </div>
+
+    <script>
+        function callNativeClose() {
+            try {
+                // This calls the native iOS handler 'closeWebView'
+                if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.closeWebView) {
+                    window.webkit.messageHandlers.closeWebView.postMessage("close");
+                } else {
+                    console.log("Native handler not found - if this is a browser, it's expected.");
+                    alert("This button works only inside the Joker Gems app.");
+                }
+            } catch(err) {
+                console.error("Error calling native code:", err);
+            }
+        }
+    </script>
+</body>
+</html>
