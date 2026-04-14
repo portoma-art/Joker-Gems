@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing | Joker Gems</title>
+    <style>
+        :root { --primary: #6b21a8; --accent: #fbbf24; --bg: #0f0a1a; --card-bg: rgba(255, 255, 255, 0.05); --text: #e2e8f0; }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); }
+        nav { padding: 20px; display: flex; justify-content: center; gap: 15px; background: rgba(0,0,0,0.2); backdrop-filter: blur(10px); }
+        nav a { color: var(--text); text-decoration: none; font-weight: 500; padding: 8px 16px; border-radius: 20px; transition: 0.3s; border: 1px solid transparent; }
+        nav a:hover, nav a.active { border-color: var(--accent); color: var(--accent); }
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; animation: fadeIn 0.8s ease-out; }
+        .info-section { background: var(--card-bg); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); line-height: 1.8; }
+        h1 { color: var(--accent); font-size: 2.2rem; }
+        .future-box { background: rgba(107, 33, 168, 0.2); border: 1px solid var(--primary); padding: 20px; border-radius: 15px; margin-top: 20px; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        footer { text-align: center; padding: 40px; opacity: 0.6; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="marketing.html" class="active">Marketing</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="container">
+        <div class="info-section">
+            <h1>Our Philosophy</h1>
+            <p>I am a beginner developer who is deeply committed to the craft of mobile app development. <strong>Joker Gems</strong> is the result of many hours of hard work, learning, and dedication. My goal is to create something that provides genuine entertainment and value to you.</p>
+            
+            <p>Currently, the app is <strong>completely free</strong>. There are no hidden subscriptions, no in-app purchases, and no locked features. I want everyone to enjoy the full experience without any barriers.</p>
+
+            <div class="future-box">
+                <strong>Looking Forward:</strong> In the future, I plan to introduce premium features and subscription models. This will help support the ongoing development and allow me to continue bringing even more value and new content to the Joker Gems community.
+            </div>
+            <p>Thank you for being part of this journey!</p>
+        </div>
+    </div>
+    <footer>&copy; 2024 Serhii Polovko.</footer>
+</body>
+</html>
